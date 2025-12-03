@@ -1,101 +1,118 @@
-Agent7A
+# 🎯 Agent7A  
+### *Your personalized climbing training assistant for the Road to 7A*
 
-Agent7A is a climbing training assistant designed to help athletes reach their goals — starting with the Road to 7A.
-It generates training sessions, logs detailed performance metrics, evaluates training blocks, and monitors progression over time.
+Agent7A is an adaptive climbing training agent designed to help you reach your next grade with structured planning, session recommendations, block validation, and long‑term progression tracking.
 
-🚀 Features
+Whether you’re training at the gym, at home, or outdoors, Agent7A generates tailored sessions based on your tools, logs your performance metrics, and keeps you on track toward your objectives.
 
-Training session generation (gym or home, equipment-aware)
+---
 
-Detailed session logging, including:
+## 🧩 Key Features
 
-Date & duration
+- 🧗 **Adaptive training session generator**  
+  Generates gym or home sessions based on equipment, current level, and training focus.
 
-Number of boulders
+- 📝 **Detailed session logging**  
+  Track duration, number of boulders, hardest grade, volume, RPE, and notes.
 
-Hardest grade
+- 🧪 **Block validation with Base Tests**  
+  Validate each training block (Base 1, Base 2, Power, Peak) with performance benchmarks.
 
-RPE
+- 📊 **Progress monitoring**  
+  View your progress against planned sessions, block completion, and grade milestones.
 
-Notes
+- 💬 **Interactive Gradio chat interface**  
+  Ask for sessions, log training data, and get status updates directly in chat.
 
-Base-test flag
+- 📓 **Jupyter Notebook prototype**  
+  A testing sandbox to refine the agent logic before deploying the Gradio app.
 
-Block evaluation (Base 1, Base 2, Power, Peak…)
+---
 
-Progress tracking toward your target grade
+## 📁 Project Structure
 
-Interactive Gradio chat agent
-
-Jupyter Notebook prototype for experimentation
-
-Runs entirely inside a virtual environment
-
-📁 Project Structure
+```
 agent7a/
     core/
         models.py          # Training data models
-        planner.py         # Session generator
-        analytics.py       # Progress + base-test evaluation
+        planner.py         # Session generation
+        analytics.py       # Progress tracking & block evaluation
     ui/
-        gradio_app.py      # Main Gradio application
+        gradio_app.py      # Main Gradio app
         notebook_prototype.ipynb
     data/
-        history/           # Training logs
+        history/           # Training logs (CSV/JSON)
+requirements.txt
+README.md
+.gitignore
+```
 
-🧩 Installation
+---
 
-Create and activate a virtual environment:
+## 🚀 Getting Started
 
+### 1. Create your virtual environment
+
+#### macOS / Linux:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+#### Windows:
+```
 python -m venv venv
-source venv/bin/activate      # macOS / Linux
-venv\Scripts\activate         # Windows
+venv\Scripts\activate
+```
 
-
-Install dependencies:
-
+### 2. Install dependencies
+```
 pip install -r requirements.txt
+```
 
-▶️ Running the Gradio App
+### 3. Launch the Gradio app
+```
 python agent7a/ui/gradio_app.py
+```
 
+---
 
-This will open the interactive chat interface where you can:
+## 📓 Notebook Prototype
 
-ask for a gym or home session
+Start Jupyter Notebook:
 
-log a training session
-
-evaluate block progress
-
-check if your base test is validated
-
-📓 Jupyter Notebook Prototype
-
-Launch Jupyter:
-
+```
 jupyter notebook
-
+```
 
 Open:
 
+```
 agent7a/ui/notebook_prototype.ipynb
+```
 
+---
 
-This is the recommended way to iterate on the agent logic before using the full Gradio UI.
+## 📈 Roadmap
 
-📈 Roadmap
+| Feature | Status | Notes |
+|--------|--------|-------|
+| Multi‑climber profiles | ⏳ Planned | e.g., "David – Road to 8A" |
+| Block configuration UI | ⏳ Planned | Customize Base/Power/Peak phases |
+| Load management analytics | ⏳ Planned | Volume, intensity, fatigue metrics |
+| SQLite persistence | ⏳ Planned | Structured, reliable storage |
+| Grade prediction curves | ⏳ Planned | Based on performance evolution |
 
-Multi-climber profiles (e.g., David → Road to 8A)
+---
 
-Configurable training blocks through the UI
+## 📜 License
 
-Improved load management & analytics
+MIT License (or another license of your choice).
 
-SQLite persistence
+---
 
-Performance-curve modeling for grade prediction
+## 🤝 Contributions
 
-📜 License
+Pull requests and feature suggestions are welcome.
 
-MIT license (or another license of your choice).
+If this project helps your climbing, consider starring the repository!
